@@ -1,7 +1,7 @@
 #ifndef QLT_SURGICAL_FLUX_H
 #define QLT_SURGICAL_FLUX_H
 
-#include "qlt/quasilocal_quantities.h"
+#include "quasilocal_quantities.h"
 
 namespace qlt {
 

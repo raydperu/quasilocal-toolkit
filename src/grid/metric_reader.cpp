@@ -1,4 +1,5 @@
-#include "grid/metric_reader.h"
+ 
+#include "metric_reader.h"
 #include <fstream>
 #include <sstream>
 #include <iostream>

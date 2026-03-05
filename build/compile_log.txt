@@ -1,0 +1,22 @@
+Microsoft (R) C/C++ Optimizing Compiler Version 19.44.35223 for x64
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+simple_example.cpp
+simple_example.cpp(47): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+simple_example.cpp(47): error C2146: syntax error: missing ';' before identifier 'is'
+simple_example.cpp(51): error C2059: syntax error: '}'
+simple_example.cpp(51): error C2143: syntax error: missing ';' before '}'
+simple_example.cpp(53): error C2143: syntax error: missing ';' before '{'
+simple_example.cpp(53): error C2447: '{': missing function header (old-style formal list?)
+simple_example.cpp(73): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+simple_example.cpp(73): error C2086: 'int ECHO': redefinition
+simple_example.cpp(47): note: see declaration of 'ECHO'
+simple_example.cpp(73): error C2146: syntax error: missing ';' before identifier 'is'
+simple_example.cpp(77): error C2059: syntax error: '}'
+simple_example.cpp(77): error C2143: syntax error: missing ';' before '}'
+simple_example.cpp(79): error C2143: syntax error: missing ';' before '{'
+simple_example.cpp(79): error C2447: '{': missing function header (old-style formal list?)
+simple_example.cpp(103): error C2059: syntax error: '}'
+simple_example.cpp(103): error C2143: syntax error: missing ';' before '}'
+simple_example.cpp(105): error C2143: syntax error: missing ';' before '{'
+simple_example.cpp(105): error C2447: '{': missing function header (old-style formal list?)

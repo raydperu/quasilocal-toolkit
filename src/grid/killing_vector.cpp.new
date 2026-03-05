@@ -1,0 +1,11 @@
+// killing_vector.cpp - Fixed version 
+ 
+#include "killing_vector.h" 
+#include "coordinate_systems.h" 
+ 
+namespace qlt { 
+namespace grid { 
+ 
+// Constructor and destructor are defined in the header, so we don't need them here 
+ 
+// generate_killing_field implementation 

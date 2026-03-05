@@ -1,7 +1,7 @@
 #ifndef QLT_CLEBSCH_KOMAR_H
 #define QLT_CLEBSCH_KOMAR_H
 
-#include "qlt/quasilocal_quantities.h"
+#include "quasilocal_quantities.h"
 
 namespace qlt {
 

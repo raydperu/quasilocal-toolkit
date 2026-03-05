@@ -8,13 +8,16 @@ set(CORE_SOURCES
 )
 
 set(CORE_HEADERS
-    ${CMAKE_CURRENT_SOURCE_DIR}/../include/qlt/quasilocal_quantities.h
     axisymmetric_j.h
     clebsch_komar.h
     quasilocal_mass.h
     surgical_flux.h
     vorticity_bounds.h
+    ${CMAKE_CURRENT_SOURCE_DIR}/quasilocal_quantities.h
 )
+
+# Find Eigen3
+find_package(Eigen3 REQUIRED)
 
 # Create the core library
 add_library(qlt_core STATIC ${CORE_SOURCES})
@@ -23,12 +26,18 @@ add_library(qlt_core STATIC ${CORE_SOURCES})
 target_include_directories(qlt_core PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/../include
-    ${EIGEN3_INCLUDE_DIRS}
+    ${CMAKE_BINARY_DIR}/include  # For config.h
 )
 
-# Public interface
+# Link with Eigen - this automatically handles include paths
+target_link_libraries(qlt_core PUBLIC Eigen3::Eigen)
+
+# Add _USE_MATH_DEFINES for Windows to get M_PI
+target_compile_definitions(qlt_core PRIVATE _USE_MATH_DEFINES)
+
+# Public interface - export local include directory
 target_include_directories(qlt_core PUBLIC
-    ${CMAKE_CURRENT_SOURCE_DIR}/../include
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 # Compile options

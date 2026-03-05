@@ -1,7 +1,7 @@
 #ifndef QLT_VORTICITY_BOUNDS_H
 #define QLT_VORTICITY_BOUNDS_H
 
-#include "qlt/quasilocal_quantities.h"
+#include "quasilocal_quantities.h"
 
 namespace qlt {
 

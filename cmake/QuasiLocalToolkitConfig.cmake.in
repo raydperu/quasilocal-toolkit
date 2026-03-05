@@ -1,0 +1,10 @@
+# QuasiLocalToolkitConfig.cmake.in
+@PACKAGE_INIT@
+
+# Include targets file if it exists
+if(EXISTS "${CMAKE_CURRENT_LIST_DIR}/QuasiLocalToolkitTargets.cmake")
+    include("${CMAKE_CURRENT_LIST_DIR}/QuasiLocalToolkitTargets.cmake")
+endif()
+
+# Check for required components
+check_required_components(QuasiLocalToolkit)

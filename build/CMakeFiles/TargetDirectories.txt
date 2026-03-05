@@ -1,0 +1,9 @@
+C:/Users/PC/Downloads/quasilocal-toolkit/build/CMakeFiles/INSTALL.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/src/core/CMakeFiles/qlt_core.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/src/core/CMakeFiles/INSTALL.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/src/grid/CMakeFiles/qlt_grid.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/src/grid/CMakeFiles/INSTALL.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/src/python/CMakeFiles/pyqlt.dir
+C:/Users/PC/Downloads/quasilocal-toolkit/build/src/python/CMakeFiles/INSTALL.dir

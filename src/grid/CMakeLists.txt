@@ -18,16 +18,39 @@ set(GRID_HEADERS
 # Create grid library
 add_library(qlt_grid STATIC ${GRID_SOURCES})
 
-# Link with core library
+# Link with core library - this inherits Eigen includes from qlt_core
 target_link_libraries(qlt_grid PRIVATE qlt_core)
 
-# Include directories
-target_include_directories(qlt_grid PRIVATE
+# Base include directories
+set(GRID_INCLUDE_DIRS
     ${CMAKE_CURRENT_SOURCE_DIR}
     ${CMAKE_CURRENT_SOURCE_DIR}/../include
-    ${EIGEN3_INCLUDE_DIRS}
-    ${HDF5_INCLUDE_DIRS}
+    ${CMAKE_BINARY_DIR}/include  # For config.h
 )
+
+# Add HDF5 includes and libraries only if found
+if(HDF5_FOUND)
+    list(APPEND GRID_INCLUDE_DIRS ${HDF5_INCLUDE_DIRS})
+    target_compile_definitions(qlt_grid PRIVATE -DHAVE_HDF5)
+    target_link_libraries(qlt_grid PRIVATE ${HDF5_LIBRARIES})
+    
+    # For Windows, handle HDF5 dependencies
+    if(WIN32 AND HDF5_LIBRARIES)
+        target_link_libraries(qlt_grid PRIVATE 
+            ${HDF5_LIBRARIES}
+        )
+    endif()
+    
+    message(STATUS "HDF5 support enabled for grid module")
+else()
+    message(STATUS "Building grid module without HDF5 support")
+endif()
+
+# Add _USE_MATH_DEFINES for Windows to get M_PI
+target_compile_definitions(qlt_grid PRIVATE _USE_MATH_DEFINES)
+
+# Include directories
+target_include_directories(qlt_grid PRIVATE ${GRID_INCLUDE_DIRS})
 
 target_include_directories(qlt_grid PUBLIC
     ${CMAKE_CURRENT_SOURCE_DIR}/../include

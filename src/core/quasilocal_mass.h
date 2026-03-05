@@ -1,7 +1,7 @@
 #ifndef QLT_QUASILOCAL_MASS_H
 #define QLT_QUASILOCAL_MASS_H
 
-#include "qlt/quasilocal_quantities.h"
+#include "quasilocal_quantities.h"
 
 namespace qlt {
 
